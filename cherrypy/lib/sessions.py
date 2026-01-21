@@ -688,6 +688,7 @@ class MemcachedSession(Session):
 
         from pymemcache.client.hash import HashClient
         from pymemcache import serde
+
         cls.cache = HashClient(cls.servers, serde=serde.pickle_serde)
 
     def _exists(self):
